@@ -28,10 +28,10 @@ https://www.arduinoall.com/product/3062/esp32-oled-v2-esp32-oled-wifi-module-blu
 
 oterwise will recieve OSError: [Errno 19] ENODEV
 
-  import machine, ssd1306_AV.  
-  from machine import Pin. 
-  rst=Pin(16,Pin.OUT). 
-  rst.value(1). 
+  import machine, ssd1306_AV<br/>
+  from machine import Pin<br/>
+  rst=Pin(16,Pin.OUT)<br/>
+  rst.value(1)<br/>
   i2c = machine.I2C(scl=machine.Pin(15), sda=machine.Pin(4)). 
   oled = ssd1306_AV.SSD1306_I2C(128, 64, i2c). 
   oled.fill(0). 
