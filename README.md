@@ -32,10 +32,10 @@ oterwise will recieve OSError: [Errno 19] ENODEV
   from machine import Pin<br/>
   rst=Pin(16,Pin.OUT)<br/>
   rst.value(1)<br/>
-  i2c = machine.I2C(scl=machine.Pin(15), sda=machine.Pin(4)). 
-  oled = ssd1306_AV.SSD1306_I2C(128, 64, i2c). 
-  oled.fill(0). 
-  oled.text('hello world',0,0).  
-  oled.show(). 
+  i2c = machine.I2C(scl=machine.Pin(15), sda=machine.Pin(4))<br/>
+  oled = ssd1306_AV.SSD1306_I2C(128, 64, i2c)<br/>
+  oled.fill(0)<br/>
+  oled.text('hello world',0,0)<br/>
+  oled.show()<br/>
 
 see source git
