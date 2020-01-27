@@ -14,3 +14,30 @@ https://randomnerdtutorials.com/flashing-micropython-firmware-esptool-py-esp32-e
 https://www.youtube.com/watch?v=5W3WvXAmDJc
 
 https://github.com/dhylands/rshell
+
+
+### OLED
+
+https://www.instructables.com/id/MicroPython-on-an-ESP32-Board-With-Integrated-SSD1/
+
+Wiring Diagram
+
+https://www.arduinoall.com/product/3062/esp32-oled-v2-esp32-oled-wifi-module-bluetooth-บอร์ด-esp32-พร้อมจอ-oled
+
+## MUST WRITE 1 TO RESET PIN FIRST
+
+oterwise will recieve OSError: [Errno 19] ENODEV
+
+import machine, ssd1306_AV
+
+  from machine import Pin
+  rst=Pin(16,Pin.OUT)
+  rst.value(1)
+  
+  i2c = machine.I2C(scl=machine.Pin(15), sda=machine.Pin(4))
+  oled = ssd1306_AV.SSD1306_I2C(128, 64, i2c)
+  oled.fill(0)
+  oled.text('hello world',0,0)
+  oled.show()
+
+see source git
